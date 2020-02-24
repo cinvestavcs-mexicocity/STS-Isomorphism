@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np, random
 from CycleGraph import *
 
 def is_sts(X, T):
@@ -252,7 +252,7 @@ class SteinerTripleSystem(object):
             # Select a random component
             i = random.choice(range(len(Gab)))
             S2 = self.cycle_switch(Gab[i])
-            return S2
+            return (a, b, Gab[i].pivots[0]), S2
 
     def cycle_structure(self):
         return

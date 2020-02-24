@@ -82,7 +82,7 @@ def sts_miller(S1, S2):
     # Find a set of generators for Q1
     #start = time.time()
     G1 = find_quasigroup_generators(Q1)
-    #print('Gens: {}'.format(time.time() - start))
+    # print('Gens size: {}'.format(len(G1)))
     # For every set of m elements check if it is a well defined isomorphism
     # Iterate over all possible permutations
     for G2 in permutations(Q2.X, len(G1)):
